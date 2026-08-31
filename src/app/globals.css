@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Designtokens for BASEN.
+   Paletten er hentet rett fra produktet: papir, varmgrå og blåskifer.
+   Skal uttrykket endres, endres det her, ikke i enkeltkomponenter. */
+@theme {
+  --color-papir: #f4efe8;
+  --color-flate: #fffdfa;
+  --color-varmgraa: #cbc6bd;
+  --color-kant: #e0d8cd;
+  --color-blekk: #22292f;
+  --color-dempet: #6f7780;
+  --color-skifer: #37454f;
+  --color-himmel: #ccdcec;
+  --color-natt: #23272b;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --radius-kort: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-papir);
+  color: var(--color-blekk);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-skifer);
+  color: var(--color-papir);
+}
