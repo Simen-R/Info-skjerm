@@ -10,6 +10,14 @@ export type Lenke = {
   href: string;
 };
 
+/** Bilde i `public/`, med alt-tekst og målene filen faktisk har. */
+export type Bilde = {
+  src: string;
+  alt: string;
+  bredde: number;
+  hoyde: number;
+};
+
 export type Punkt = {
   tittel: string;
   beskrivelse: string;

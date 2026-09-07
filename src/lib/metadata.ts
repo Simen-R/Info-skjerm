@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/content/site";
+import { logo, site } from "@/content/site";
 
 /** Bygger sidetitler og delingsdata konsistent for alle undersider. */
 export function lagMetadata(tittel: string, beskrivelse: string): Metadata {
@@ -11,6 +11,7 @@ export function lagMetadata(tittel: string, beskrivelse: string): Metadata {
       description: beskrivelse,
       locale: "nb_NO",
       type: "website",
+      images: [{ url: logo.src, width: logo.bredde, height: logo.hoyde, alt: logo.alt }],
     },
   };
 }

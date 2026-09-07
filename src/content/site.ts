@@ -1,4 +1,4 @@
-import type { Lenke } from "./types";
+import type { Bilde, Lenke } from "./types";
 
 // Vercel setter gjerne variabelen til tom streng når feltet står tomt i
 // prosjektinnstillingene, og `??` fanger ikke tom streng. Da havner "" i
@@ -24,6 +24,23 @@ export const site = {
   emne: "DATA3300 Entreprenørskap i praksis, OsloMet høst 2026",
   url: finnSideUrl(),
 } as const;
+
+/** Logoen: navnet skåret i tre, i den rammen produktet selv skal henge i. */
+export const logo: Bilde = {
+  src: "/images/basen-logo.jpg",
+  alt: "BASEN-logoen: navnet skåret i tre i en treramme på veggen",
+  bredde: 1060,
+  hoyde: 470,
+};
+
+/** Tettere utsnitt av samme logo, til den lille plassen i headeren. */
+export const logoMerke: Bilde = {
+  src: "/images/basen-merke.jpg",
+  // Kort alt-tekst: bildet er lenketeksten hjem, ikke en illustrasjon.
+  alt: "BASEN",
+  bredde: 480,
+  hoyde: 202,
+};
 
 export const hovedmeny: Lenke[] = [
   { label: "Produkt", href: "/produkt" },
